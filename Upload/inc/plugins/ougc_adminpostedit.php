@@ -434,10 +434,7 @@ if(use_xmlhttprequest == "1")
 					{
 						$update_query['postnum'] = 'postnum+1';
 					}
-					if($forum['usethreadcounts'])
-					{
-						$update_query['threadnum'] = 'threadnum+1';
-					}
+					
 
 					if(!empty($update_query))
 					{
@@ -455,11 +452,7 @@ if(use_xmlhttprequest == "1")
 					{
 						$update_query['postnum'] = 'postnum-1';
 					}
-					if($forum['usethreadcounts'])
-					{
-						$update_query['threadnum'] = 'threadnum-1';
-					}
-
+					
 					if(!empty($update_query))
 					{
 						$db->update_query('users', $update_query, "uid='{$user['uid']}'", 1, true);
